@@ -1,0 +1,97 @@
+/* Hero Banner divider */
+.divider-bottom-white {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.divider-bottom-white svg {
+    position: relative;
+    display: block;
+    width: calc(110% + 1.3px);
+    height: 150px;
+}
+
+.divider-bottom-white .shape-fill {
+    fill: rgb(242, 242, 243);
+}
+
+/* Skills divider */
+.divider-bottom-skills {
+    position: relative;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.divider-bottom-skills svg {
+    position: relative;
+    display: block;
+    width: calc(110% + 1.3px);
+    height: 150px;
+}
+
+.divider-bottom-skills .shape-fill {
+    fill: rgb(242, 242, 243);
+}
+
+/* About me divider */
+.divider-bottom-black {
+    position: relative;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.divider-bottom-black svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 110px;
+}
+
+.divider-bottom-black .shape-fill {
+    fill: rgb(18, 18, 18);
+}
+
+.footer {
+    max-width: 1280px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+@keyframes slide-left {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-right {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slide-left {
+    animation: slide-left 0.5s ease-in-out;
+}
+
+.slide-right {
+    animation: slide-right 0.5s ease-in-out;
+}
