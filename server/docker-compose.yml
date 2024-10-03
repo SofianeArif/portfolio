@@ -1,0 +1,10 @@
+version: '3'
+services:
+  portfolio:
+    build: .
+    container_name: portfolio_server
+    ports:
+      - "4242:4242"
+    env_file:
+      - .env
+    restart: always
