@@ -12,6 +12,7 @@ const ReviewsFB = () => {
     const initialData: Review = {
         firstName: "",
         lastName: "",
+        email: "",
         rating: 5,
         comment: "",
     };
@@ -112,7 +113,17 @@ const ReviewsFB = () => {
                         onChange={handleInputChange}
                         sx={{ mb: 2 }}
                     />
-
+                    <TextField
+                        fullWidth
+                        label="Email"
+                        variant="outlined"
+                        color="secondary"
+                        name="email"
+                        required={true}
+                        value={review.email}
+                        onChange={handleInputChange}
+                        sx={{ mb: 2 }}
+                    />
                     <TextField
                         fullWidth
                         label="Commentaire"

@@ -3,8 +3,9 @@ import sequelize from '../config/database';
 
 class Review extends Model {
     public id!: number;
-    public firstName!: string;
-    public lastName!: string;
+    public firstName?: string;
+    public lastName?: string;
+    public email!: string;
     public rating!: number;
     public comment!: string;
 }
@@ -17,11 +18,15 @@ Review.init({
     },
     firstName: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     lastName: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
+    },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     rating: {
         type: DataTypes.INTEGER,
@@ -34,11 +39,6 @@ Review.init({
     comment: {
         type: DataTypes.TEXT,
         allowNull: false,
-    },
-    approved: {
-        type: DataTypes.BOOLEAN,
-        allowNull: false,
-        defaultValue: false
     }
 }, {
     sequelize,

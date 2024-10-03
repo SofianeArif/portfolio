@@ -16,7 +16,7 @@ import Django from "../../static/images/frameworks/django.svg";
 const projectData : ProjectType[] = [
     {
         name: "Projet 1",
-        thumbnail: "./tst.png",
+        thumbnail: "https://placehold.co/600x400",
         description: "Description du projet 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
         stack: [{
@@ -29,38 +29,283 @@ const projectData : ProjectType[] = [
     },
     {
         name: "Projet 2",
-        thumbnail: "./tst.png",
+        thumbnail: "https://placehold.co/600x400",
         description: "Description du projet 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
         url: "",
     },
     {
         name: "Projet 3",
-        thumbnail: "./tst.png",
+        thumbnail: "https://placehold.co/600x400",
         description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
     },
     {
         name: "Projet 3",
-        thumbnail: "./tst.png",
+        thumbnail: "https://placehold.co/600x400",
         description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
     },
     {
         name: "Projet 3",
-        thumbnail: "./tst.png",
+        thumbnail: "https://placehold.co/600x400",
         description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
     },
     {
         name: "Projet 3",
-        thumbnail: "./tst.png",
+        thumbnail: "https://placehold.co/600x400",
         description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
     },
     {
         name: "Projet 3",
-        thumbnail: "./tst.png",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+    },{
+        name: "Projet 1",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+        stack: [{
+            name: 'Python',
+            logo: Python
+        }, {
+            name: 'Django',
+            logo: Django
+        }],
+    },
+    {
+        name: "Projet 2",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+        url: "",
+    },
+    {
+        name: "Projet 3",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+    },
+    {
+        name: "Projet 3",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+    },
+    {
+        name: "Projet 3",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+    },
+    {
+        name: "Projet 3",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+    },
+    {
+        name: "Projet 3",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+    },{
+        name: "Projet 1",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+        stack: [{
+            name: 'Python',
+            logo: Python
+        }, {
+            name: 'Django',
+            logo: Django
+        }],
+    },
+    {
+        name: "Projet 2",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+        url: "",
+    },
+    {
+        name: "Projet 3",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+    },
+    {
+        name: "Projet 3",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+    },
+    {
+        name: "Projet 3",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+    },
+    {
+        name: "Projet 3",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+    },
+    {
+        name: "Projet 3",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+    },{
+        name: "Projet 1",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+        stack: [{
+            name: 'Python',
+            logo: Python
+        }, {
+            name: 'Django',
+            logo: Django
+        }],
+    },
+    {
+        name: "Projet 2",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+        url: "",
+    },
+    {
+        name: "Projet 3",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+    },
+    {
+        name: "Projet 3",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+    },
+    {
+        name: "Projet 3",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+    },
+    {
+        name: "Projet 3",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+    },
+    {
+        name: "Projet 3",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+    },{
+        name: "Projet 1",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+        stack: [{
+            name: 'Python',
+            logo: Python
+        }, {
+            name: 'Django',
+            logo: Django
+        }],
+    },
+    {
+        name: "Projet 2",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+        url: "",
+    },
+    {
+        name: "Projet 3",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+    },
+    {
+        name: "Projet 3",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+    },
+    {
+        name: "Projet 3",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+    },
+    {
+        name: "Projet 3",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+    },
+    {
+        name: "Projet 3",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+    },{
+        name: "Projet 1",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+        stack: [{
+            name: 'Python',
+            logo: Python
+        }, {
+            name: 'Django',
+            logo: Django
+        }],
+    },
+    {
+        name: "Projet 2",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+        url: "",
+    },
+    {
+        name: "Projet 3",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+    },
+    {
+        name: "Projet 3",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+    },
+    {
+        name: "Projet 3",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+    },
+    {
+        name: "Projet 3",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+    },
+    {
+        name: "Projet 3",
+        thumbnail: "https://placehold.co/600x400",
         description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
     },

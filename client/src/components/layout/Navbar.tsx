@@ -168,11 +168,6 @@ const Navbar = ({style} : { style : React.CSSProperties }) => {
                                 </Button>
                             </Link>
                         ))}
-                        <MenuItem key={"Dashboard"}>
-                            <Link to="/dashboard">
-                                <Button color="inherit">Tableau de bord</Button>
-                            </Link>
-                        </MenuItem>
                     </Box>
                 </Toolbar>
             </Container>

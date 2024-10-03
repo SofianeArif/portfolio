@@ -1,7 +1,8 @@
 export type Review = {
     id? :number;
-    firstName: string;
-    lastName: string;
+    firstName: string | null;
+    lastName: string | null;
+    email: string;
     rating: number | null;
     comment: string;
     approved?: boolean;
