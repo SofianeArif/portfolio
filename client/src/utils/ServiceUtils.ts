@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const apiEndpoint = 'http://localhost:4242'
+const apiEndpoint = 'https://sofiane-arif.fr/api'
 
 /**
  * This function is used to make a POST request to the API
