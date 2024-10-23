@@ -15,7 +15,7 @@ export const ContactInterface : React.FC = () => {
                 const {data} = await contactService.getAll();
                 setContacts(data);
             } catch (error) {
-                console.error('Erreur lors de la récupération des contacts:', error);
+                console.error('Erreur lors de la récupération des messages:', error);
             } finally {
                 setLoading(false);
             }

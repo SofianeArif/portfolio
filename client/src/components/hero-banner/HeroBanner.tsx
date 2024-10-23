@@ -81,7 +81,7 @@ function HeroBanner() {
 
                             <Box
                                 component="a"
-                                href="/path/to/cv.pdf"
+                                href="/cv.pdf"
                                 sx={iconStyle}
                             >
                                 <img src={CV} alt="CV" style={{ width: 40, height: 40 }} />
@@ -91,7 +91,7 @@ function HeroBanner() {
                 </Grid>
 
                 <Grid container size={{ xs: 12, md: 6 }} sx={pictureStyle} textAlign="center" my="auto">
-                    <img src={heroBannerPresentation.picture.src} alt={heroBannerPresentation.picture.alt} style={{borderRadius: '50%'}} />
+                    <img src={heroBannerPresentation.picture.src} alt={heroBannerPresentation.picture.alt} style={{borderRadius: '50%', width: '50%'}} />
                 </Grid>
             </Grid>
 

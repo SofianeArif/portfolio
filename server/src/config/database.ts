@@ -7,7 +7,7 @@ const sequelize = new Sequelize(
     process.env.DB_PASSWORD!, {
     port: +process.env.DB_PORT!,
     host: process.env.DB_HOST!,
-    dialect: 'postgres',
+    dialect: 'mysql',
 });
 
 export default sequelize;

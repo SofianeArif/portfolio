@@ -65,7 +65,7 @@
 }
 
 .footer {
-    max-width: 1280px;
+    /*max-width: 1280px;*/
     text-align: center;
     margin: 0 auto;
 }
@@ -100,4 +100,23 @@ div > div > * {
     ::-webkit-scrollbar {
         display: none
     }
+}
+
+.icon-container {
+    display: inline-block;
+    perspective: 1000px;
+}
+
+.icon {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: rotate(0);
+    z-index: 1;
+    background: transparent;
+    overflow: visible;
+}
+
+.icon:hover {
+    transform: rotate(-10deg) scale(1.1);
+    z-index: 2;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }

@@ -120,6 +120,7 @@ const ReviewList : React.FC<{
                             checked={review.approved}
                             onChange={() => onReviewApproval(review.id as number)}
                             color="primary"
+                            disabled={true}
                         />
                     </Grid>
                     <Grid size={1} sx={{textAlign: 'center'}}>

@@ -21,14 +21,14 @@ const pages = [
     {name: 'Contact', href: '#contact'},
 ];
 
-const Navbar = ({style} : { style : React.CSSProperties }) => {
+const Navbar = ({style}: { style: React.CSSProperties }) => {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
     const [scrollingUp, setScrollingUp] = useState(true);
     const [lastScrollTop, setLastScrollTop] = useState(0);
 
     const navigate = useNavigate();
 
-    const handleOpenNavMenu = (event : React.MouseEvent<HTMLElement>) => {
+    const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorElNav(event.currentTarget);
     };
 
@@ -36,7 +36,7 @@ const Navbar = ({style} : { style : React.CSSProperties }) => {
         setAnchorElNav(null);
     };
 
-    const handleSmoothScroll = (event : React.MouseEvent<HTMLElement>, href : string) => {
+    const handleSmoothScroll = (event: React.MouseEvent<HTMLElement>, href: string) => {
         event.preventDefault();
         const targetElement = document.querySelector(href);
         if (targetElement) {

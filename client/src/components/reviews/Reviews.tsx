@@ -23,7 +23,7 @@ const Reviews = ({ reviewsData }: { reviewsData: Review[] }) => {
                                         value={review.rating}
                                         readOnly
                                         precision={0.5}
-                                        sx={{ color: "#FFD700", mb: 2 }}
+                                        sx={{ color: "#FFD700", mb: '10px' }}
                                     />
                                     <Typography variant="body1" color="textSecondary">
                                         {review.comment}

@@ -1,315 +1,139 @@
 import React, {useState} from "react";
 import {
     Box,
-    Grid2 as Grid,
-    Typography,
     Card,
-    IconButton, List, ListItem, ListItemAvatar, Avatar, ListItemText, Paper
+    Grid2 as Grid,
+    IconButton,
+    List,
+    ListItem,
+    ListItemAvatar,
+    ListItemText,
+    Paper,
+    Typography
 } from "@mui/material";
 import Carousel from 'react-material-ui-carousel';
-import {ArrowBackIosNew} from "@mui/icons-material";
-import {ProjectType, StackType} from "../../types/Project";
+import {ArrowBackRounded} from "@mui/icons-material";
+import {EToolType, ProjectType, StackType} from "../../types/Project";
 
-import Python from "../../static/images/languages/python.svg";
-import Django from "../../static/images/frameworks/django.svg";
+import ReactSVG from "../../static/images/about-me/react.svg";
+import TypescriptSVG from "../../static/images/about-me/typescript.svg";
+import MaterialUISVG from "../../static/images/libraries/materialui.svg";
+import NodeJsSVG from "../../static/images/about-me/nodejs.svg";
+import PgsqlSVG from "../../static/images/about-me/postgresql.svg";
+import PhpSVG from "../../static/images/languages/php.svg";
+import LaravelSVG from "../../static/images/frameworks/laravel.svg";
+import JavaScriptSVG from "../../static/images/about-me/javascript.svg";
+import MongoDBSVG from "../../static/images/frameworks/mongo.svg";
+import HTMLSVG from "../../static/images/languages/html.svg";
+import CSSSVG from "../../static/images/languages/css.svg";
 
-const projectData : ProjectType[] = [
-    {
-        name: "Projet 1",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-        stack: [{
-            name: 'Python',
-            logo: Python
-        }, {
-            name: 'Django',
-            logo: Django
-        }],
-    },
-    {
-        name: "Projet 2",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-        url: "",
-    },
-    {
-        name: "Projet 3",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-    },
-    {
-        name: "Projet 3",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-    },
-    {
-        name: "Projet 3",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-    },
-    {
-        name: "Projet 3",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-    },
-    {
-        name: "Projet 3",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-    },{
-        name: "Projet 1",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-        stack: [{
-            name: 'Python',
-            logo: Python
-        }, {
-            name: 'Django',
-            logo: Django
-        }],
-    },
-    {
-        name: "Projet 2",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-        url: "",
-    },
-    {
-        name: "Projet 3",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-    },
-    {
-        name: "Projet 3",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-    },
-    {
-        name: "Projet 3",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-    },
-    {
-        name: "Projet 3",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-    },
-    {
-        name: "Projet 3",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-    },{
-        name: "Projet 1",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-        stack: [{
-            name: 'Python',
-            logo: Python
-        }, {
-            name: 'Django',
-            logo: Django
-        }],
-    },
-    {
-        name: "Projet 2",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-        url: "",
-    },
-    {
-        name: "Projet 3",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-    },
-    {
-        name: "Projet 3",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-    },
-    {
-        name: "Projet 3",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-    },
-    {
-        name: "Projet 3",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-    },
-    {
-        name: "Projet 3",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-    },{
-        name: "Projet 1",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-        stack: [{
-            name: 'Python',
-            logo: Python
-        }, {
-            name: 'Django',
-            logo: Django
-        }],
-    },
-    {
-        name: "Projet 2",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-        url: "",
-    },
-    {
-        name: "Projet 3",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-    },
-    {
-        name: "Projet 3",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-    },
-    {
-        name: "Projet 3",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-    },
-    {
-        name: "Projet 3",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-    },
-    {
-        name: "Projet 3",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-    },{
-        name: "Projet 1",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-        stack: [{
-            name: 'Python',
-            logo: Python
-        }, {
-            name: 'Django',
-            logo: Django
-        }],
-    },
-    {
-        name: "Projet 2",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-        url: "",
-    },
-    {
-        name: "Projet 3",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-    },
-    {
-        name: "Projet 3",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-    },
-    {
-        name: "Projet 3",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-    },
-    {
-        name: "Projet 3",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-    },
-    {
-        name: "Projet 3",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-    },{
-        name: "Projet 1",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-        stack: [{
-            name: 'Python',
-            logo: Python
-        }, {
-            name: 'Django',
-            logo: Django
-        }],
-    },
-    {
-        name: "Projet 2",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-        url: "",
-    },
-    {
-        name: "Projet 3",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-    },
-    {
-        name: "Projet 3",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-    },
-    {
-        name: "Projet 3",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-    },
-    {
-        name: "Projet 3",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-    },
-    {
-        name: "Projet 3",
-        thumbnail: "https://placehold.co/600x400",
-        description: "Description du projet 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
-    },
+import FreeAdsHome from "../../static/screens/freeads/home.png";
+import TWAHome from "../../static/screens/tweetacademie/home.png";
+import TWALogin from "../../static/screens/tweetacademie/login.png";
+import TWAProfile from "../../static/screens/tweetacademie/profile.png";
+import P4Home from "../../static/screens/p4/home.png";
+import P4Color from "../../static/screens/p4/color.png";
+import WYSIWYGHome from "../../static/screens/wysiwyg/home.png";
 
+const {react, javascript, typescript, materialUi, nodeJs, postgresSql, mongoDb, php, laravel, html, css} = {
+    react: {
+        name: 'React',
+        logo: ReactSVG,
+        type: EToolType.FRAMEWORK
+    }, javascript: {
+        name: 'JavaScript',
+        logo: JavaScriptSVG,
+        type: EToolType.LANGUAGE
+    }, typescript: {
+        name: 'TypeScript',
+        logo: TypescriptSVG,
+        type: EToolType.LANGUAGE
+    }, materialUi: {
+        name: 'MaterialUI',
+        logo: MaterialUISVG,
+        type: EToolType.LIBRARY
+    }, nodeJs: {
+        name: 'NodeJS',
+        logo: NodeJsSVG,
+        type: EToolType.FRAMEWORK
+    }, postgresSql: {
+        name: 'PostgresSQL',
+        logo: PgsqlSVG,
+        type: EToolType.DATABASE
+    }, php: {
+        name: 'PHP',
+        logo: PhpSVG,
+        type: EToolType.LANGUAGE
+    }, laravel: {
+        name: 'Laravel',
+        logo: LaravelSVG,
+        type: EToolType.FRAMEWORK
+    }, mongoDb: {
+        name: 'MongoDB',
+        logo: MongoDBSVG,
+        type: EToolType.DATABASE
+    }, html: {
+        name: 'HTML',
+        logo: HTMLSVG,
+        type: EToolType.LANGUAGE
+    }, css: {
+        name: 'CSS',
+        logo: CSSSVG,
+        type: EToolType.LANGUAGE
+    }
+
+}
+
+const projectData: ProjectType[] = [
+    {
+        name: "Projet libre",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Dans le cadre de la fin de formation, un projet de groupe a été réalisé. SoloSail est un ERP (Enterprise Resource Management) destiné aux entrepreneurs, faciliant leurs opérations au quotidien et leur offrant une vision globale de la santé de leur entreprise.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+        stack: [typescript, react, nodeJs, materialUi],
+    },
+    {
+        name: "Portfolio",
+        thumbnail: "https://placehold.co/600x400",
+        description: "Dans le but de valider les compétences acquises au cours de la formation, ce portfolio a été réalisé en respectant au mieux les normes web actuelles, et utilisant des outils populaires et adaptés aux contraintes présentées.",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+        stack: [react, typescript, nodeJs, materialUi],
+    },
+    {
+        name: "FreeAds",
+        thumbnail: FreeAdsHome,
+        description: "Le projet FreeAds a eu pour objectif de nous faire découvrir les patrons de conception MVC (Model View Controller) via Laravel, en créant un site d'annonces, type Leboncoin, afin d'être ammené à utiliser toutes les fonctionnalités principales du concept.",
+        images: [FreeAdsHome],
+        stack: [php, laravel],
+    },
+    {
+        name: "TweetAcadémie",
+        thumbnail: TWAHome,
+        description: "Le projet TweetAcadémie avait pour but de réaliser un clone de Twitter, en groupe aléatoires, avec comme contrainte un choix de base de données à réaliser en amont, qui sera commune à tous les groupes et non modifiable une fois validée. Cela nous a donc obligés à correctement ancitiper les besoins.",
+        images: [TWAProfile, TWAHome, TWALogin],
+        stack: [php, ],
+    },
+    {
+        name: "Puissance 4",
+        thumbnail: P4Home,
+        description: "Le projet Puissance 4.... FLEMME DU RESTE",
+        images: [P4Home, P4Color],
+        stack: [javascript, html, css]
+    },
+    {
+        name: "WYSIWYG",
+        thumbnail: WYSIWYGHome,
+        description: "Le projet WYSIWYG (What You See Is What You Get), a été réalisé dans le but de créer un éditeur de texte visuel tel que TinyMCE, en un week-end, appelé \"Rush\" en utilisant le minimum d'outils, il sert à ajouter des couleurs et autres effets de mise en page, d'alignement, etc. Tout ceci en possédant un retour en live du résultat, servant de prévisualisation, c'est de là d'où est tiré le nom What You See Is What You Get.",
+        images: [WYSIWYGHome],
+        stack: [javascript, html, css]
+    },
+    {
+        name: "My Events",
+        thumbnail: "https://placehold.co/600x400",
+        description: "My Events a été concu dans le but de choisir une spécialisation, sur ce projet, nous étions en binome, nous avons donc réparti la tâche de manière simple, une personne s'occupant du front (affichage, interaction entre l'utilisateur et le site, design, etc.) et une personne sur le back (logique entre le site et le serveur, intégrité des données, etc.).",
+        images: ["https://placehold.co/600x400", "https://placehold.co/600x400"],
+        stack: [typescript, react, nodeJs, mongoDb],
+    }
 ];
 
 const ProjectsGallery = () => {
@@ -328,7 +152,7 @@ const ProjectsGallery = () => {
                             ":hover .overlay": {
                                 opacity: 0.8,
                             },
-
+                            width: "100%",
                         }}
                     >
                         <Box
@@ -337,7 +161,7 @@ const ProjectsGallery = () => {
                             alt={project.name}
                             sx={{
                                 width: "100%",
-                                height: "auto",
+                                height: "150px",
                                 display: "block",
                             }}
                         />
@@ -369,31 +193,31 @@ const ProjectsGallery = () => {
 
     const renderProjectDetails = () => (
         <Box sx={{maxWidth: 'lg', margin: '0 auto'}}>
-            <Carousel autoPlay={true} navButtonsAlwaysVisible={true} animation="slide" cycleNavigation={false}
-                      sx={{width: {xs: '100%', lg: '50%'}, margin: '0 auto', textAlign: 'center'}}>
-                {selectedProject && selectedProject.images.map((image : string, index : number) => (
+            <Carousel autoPlay={true} navButtonsAlwaysVisible={true} animation="slide" cycleNavigation={false} sx={{margin: '0 auto', textAlign: 'center', width: '80%'}} height="400px">
+                {selectedProject && selectedProject.images.map((image: string, index: number) => (
                     <Box
                         component="img"
                         src={image}
                         alt={selectedProject.name}
                         key={index}
+                        sx={{width: '80%', height: 'auto'}}
                     />
                 ))}
             </Carousel>
 
             <Box sx={{my: 5, mx: 'auto', textAlign: 'center'}}>
-                <Typography variant="body1" color="black" sx={{mt: 2}}>
+                <Typography variant="body2" color="black" sx={{mt: 2, maxWidth: '50%', margin: '0 auto'}}>
                     {selectedProject.description}
                 </Typography>
                 <List sx={{display: 'flex', justifyContent: 'center', gap: '24px', mt: 3}}>
-                    {selectedProject.stack && selectedProject.stack.map((stack : StackType) => (
-                        <Paper elevation={3} sx={{width: 'fit-content', mb: 1}}>
+                    {selectedProject.stack && selectedProject.stack.map((stack: StackType, index: number) => (
+                        <Paper key={index} elevation={3} sx={{width: 'fit-content', mb: 1}}>
                             <ListItem>
-                                <ListItemAvatar>
-                                        <img src={stack.logo} alt={stack.name} style={{width: '80%'}}/>
+                                <ListItemAvatar sx={{width: '35px'}}>
+                                    <img src={stack.logo} alt={stack.name} style={{width: '35px'}}/>
                                 </ListItemAvatar>
                                 <ListItemText color="primary" primary={stack.name}
-                                              secondary="Langage de programmation"/>
+                                              secondary={stack.type}/>
                             </ListItem>
                         </Paper>
                     ))}
@@ -411,7 +235,7 @@ const ProjectsGallery = () => {
                     onClick={() => setSelectedProject(null)}
                     sx={{color: 'black', mb: 1, mr: 2, display: `${selectedProject ? 'inline-flex' : 'none'}`}}
                 >
-                    <ArrowBackIosNew/>
+                    <ArrowBackRounded fontSize="medium"/>
                 </IconButton>
                 {selectedProject ? selectedProject.name : "Projets notables"}
             </Typography>

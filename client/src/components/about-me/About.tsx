@@ -13,15 +13,16 @@ import DockerSVG from "../../static/images/about-me/docker.svg";
 import AboutWaveDivider from "./AboutWaveDivider";
 
 export type IKeySkill = {
-    src : string,
-    title : string,
-    description : string
+    src: string,
+    title: string,
+    description: string
 }
 
 export type Skills = {
-    right : IKeySkill[],
-    left : IKeySkill[]
+    right: IKeySkill[],
+    left: IKeySkill[]
 }
+
 export default function About() {
 
     const skills = {
@@ -71,12 +72,12 @@ export default function About() {
         ]
     };
 
-    const aboutMeDescription = [
+    const aboutMeDescription: { description: string }[] = [
         {
-            description: "Passionné de l'informatique depuis mon plus jeune âge, j'ai décidé d'intégrer la formation Web@cadémie by Epitech afin de parfaire mes compétences dans ce domaine, me permettant, à terme, d'être polyvalent et d'avoir la capacité d'aborder un nouveau langage."
+            description: "Passionné depuis toujours par l'informatique, j'ai décidé d'intégrer la formation Web@cadémie by Epitech afin de parfaire mes compétences dans ce domaine. Me permettant, à terme, d'avoir la capacité d'aborder de nouveaux langages, de nouveaux défis, et d'apporter des solutions à des problèmes concrets du domaine."
         },
         {
-            description: "Comme j'ai pu en avoir l'occasion avec la découverte du framework Aurelia et de l'apprentissage de Typescript."
+            description: "Au cours de mon alternance, qui fut mon expérience la plus appréciable et enrichissante jusqu'à présent. J'ai pu avoir l'occasion de réaliser de nouveaux défis, notamment avec la découverte du framework Aurelia et de l'apprentissage de Typescript."
         }
     ];
 
@@ -98,25 +99,28 @@ export default function About() {
                     <Grid size={{lg: 7}}>
                         <Grid container direction="column" justifyContent="center" alignItems="center">
                             <Grid size={{lg: 1}}>
-                                <Typography variant="h5" align="center" color="black">Compétences clés</Typography>
+                                <Typography variant="h5" align="center" color="black">Compétences
+                                    principales</Typography>
                             </Grid>
                             {/* Desktop   */}
                             <Grid display={{xs: 'none', md: 'inherit'}} container spacing={1} justifyContent="center">
                                 <Grid size={{lg: 3}} sx={{marginRight: '60px'}}>
-                                    <List>
-                                        {skills.left.map((skill : IKeySkill) => (
+                                    <List className="icon-container">
+                                        {skills.left.map((skill: IKeySkill) => (
                                             <ListItem key={skill.title} sx={{marginTop: '25px'}}>
-                                                <img src={skill.src} style={{height: '50px', marginRight: '15px'}}
+                                                <img src={skill.src} className="icon"
+                                                     style={{height: '50px', marginRight: '15px'}}
                                                      alt={skill.description}/><Typography variant="h5"
                                                                                           color="black">{skill.title}</Typography>
                                             </ListItem>))}
                                     </List>
                                 </Grid>
                                 <Grid size={{lg: 3}}>
-                                    <List>
-                                        {skills.right.map((skill : IKeySkill) => (
+                                    <List className="icon-container">
+                                        {skills.right.map((skill: IKeySkill) => (
                                             <ListItem key={skill.title} sx={{marginTop: '25px'}}>
-                                                <img src={skill.src} style={{height: '50px', marginRight: '15px'}}
+                                                <img src={skill.src} className="icon"
+                                                     style={{height: '50px', marginRight: '15px'}}
                                                      alt={skill.description}/><Typography variant="h5"
                                                                                           color="black">{skill.title}</Typography>
                                             </ListItem>))}
@@ -149,7 +153,7 @@ export default function About() {
                     <Grid size={{lg: 5}} sx={{display: {xs: 'none', lg: 'block'}}}>
                         {aboutMeDescription.map((description) => (
                             <Typography key={description.description} variant="body1" color="black"
-                                        marginBottom="10px">{description.description}</Typography>
+                                        marginBottom="10px" lineHeight="24px">{description.description}</Typography>
                         ))}
                     </Grid>
                 </Grid>
